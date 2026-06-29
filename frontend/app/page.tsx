@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import CategoryGrid from "@/components/CategoryGrid";
 import FeaturedSection from "@/components/FeaturedSection";
+import HomepageReviews from "@/components/HomepageReviews";
 import { getProductsByTag } from "@/lib/data";
 
 // Revalidate this page every 60s so new products/admin changes show up
@@ -25,25 +26,12 @@ export default async function HomePage() {
         title="New Arrivals"
         subtitle="Fresh drops, just landed"
         viewAllHref="/shop?tag=new-arrival"
-        products={newArrivals}
+        products={newArrivals.slice(0, 20)}
       />
 
-      <FeaturedSection
-        title="Best Sellers"
-        subtitle="Loved by the BormonShop community"
-        viewAllHref="/shop?tag=best-seller"
-        products={bestSellers}
-      />
-
-      <FeaturedSection
-        title="Trending Now"
-        subtitle="What everyone's wearing this week"
-        viewAllHref="/shop?tag=trending"
-        products={trending}
-      />
 
       {/* Newsletter / brand strip */}
-      <section className="px-4 md:px-10 py-16 border-t border-border text-center">
+      {/* <section className="px-4 md:px-10 py-16 border-t border-border text-center">
         <h2 className="font-display text-2xl font-semibold text-ink mb-3">
           Stay ahead of the drop
         </h2>
@@ -67,7 +55,9 @@ export default async function HomePage() {
             Subscribe
           </button>
         </form>
-      </section>
+      </section> */}
+
+      <HomepageReviews />
     </main>
   );
 }

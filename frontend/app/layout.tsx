@@ -6,6 +6,7 @@ import { CartProvider } from "@/lib/CartContext";
 import { AuthProvider } from "@/lib/AuthContext";
 import Navbar from "@/components/Navbar";
 import CartDrawer from "@/components/CartDrawer";
+import Footer from "@/components/Footer";
 
 // Inter for body text, Poppins for display/headings — both self-hosted via next/font
 const inter = Inter({
@@ -53,6 +54,7 @@ export default function RootLayout({
             <CartProvider>
               <Navbar />
               {children}
+              <Footer />
               <CartDrawer />
             </CartProvider>
           </AuthProvider>

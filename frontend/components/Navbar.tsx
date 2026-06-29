@@ -22,12 +22,15 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-primary/95 backdrop-blur border-b border-border">
+    <header className="sticky top-0 z-40 bg-primary/70 backdrop-blur border-b border-border">
       <nav className="max-w-6xl mx-auto px-4 md:px-10 h-16 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="font-display font-bold text-lg text-ink shrink-0">
+        <a href="/">
+          <img src="/shop-logo-dark.png" alt="BormonShop BD Logo" className="h-10 w-auto   " />
+        </a>
+        {/* <Link href="/" className="font-display font-bold text-lg text-ink shrink-0">
           Bormon<span className="text-accent">Shop</span> BD
-        </Link>
+        </Link> */}
 
         {/* Search — hidden on small screens to save space, shown in mobile menu instead */}
         <form onSubmit={handleSearch} className="hidden md:flex flex-1 max-w-sm">

@@ -18,6 +18,8 @@ export default function AdminProductsPage() {
 
   useEffect(() => {
     fetchProducts();
+    console.log("Products :", products);
+    
   }, []);
 
   const handleDelete = async (id: string, name: string) => {
